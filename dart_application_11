@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'dart:math';
+import 'package:dart_application_1/dart_application_1.dart'
+    as dart_application_1;
 
 void main(List<String> arguments) {
   print(
@@ -27,6 +29,21 @@ void main(List<String> arguments) {
 }
 
 void one(int one) {
+  // int? one;
+
+  // while (true) {
+  //   stdout.write("점수를 입력하세요: ");
+  //   String? input = stdin.readLineSync();
+
+  //   one = int.tryParse(input ?? "");
+
+  //   if (one != null) {
+  //     break; // 정상 입력 → 반복 종료
+  //   }
+
+  //   print("⚠ 숫자를 입력해야 합니다. 다시 입력하세요.\n");
+  // }
+
   print("필수 문제 1번");
   if (one <= 100 && one >= 90) {
     print("이학생의 점수는 ${one} 이며, 등급은 A등급입니다.");
@@ -41,6 +58,8 @@ void two(List<String> cart) {
   // - 티셔츠 : 10000원
   // - 바지 : 8000원
   // - 모자 : 4000원
+  // Map<String, int> priceTable = {"티셔츠": 10000, "바지": 8000, "모자": 4000};
+
   int total = 0;
 
   for (var i = 0; i < cart.length; i++) {
@@ -55,6 +74,10 @@ void two(List<String> cart) {
     }
   }
 
+  // for (var item in cart) {
+  //   total += priceTable[item] ?? 0; // 잘못된 값이 들어오면 0 처리
+  // }
+
   int discount = total ~/ 10;
   int result = total - discount;
 
@@ -65,6 +88,7 @@ void two(List<String> cart) {
 }
 
 void three(List<int> lotto) {
+  // Set<int> list2 = {9, 19, 29, 35, 37, 38};
 
   Set<int> user = {};
   int count = 0;
@@ -76,6 +100,10 @@ void three(List<int> lotto) {
       count++;
     }
   }
+
+  // Set<int> matched = set.intersection(list2);
+  print(count);
+  // print(matched.length);
 
   print("도전 문제");
   print("발급한 로또 번호 : ${lotto}");
