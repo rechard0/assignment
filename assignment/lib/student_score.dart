@@ -4,6 +4,7 @@ class StudentScore extends Score {
   final String name;
 
   StudentScore({required super.score, required this.name});
+  // StudentScore(this.name, int score) : super(score);
 
   @override
   void show() {
